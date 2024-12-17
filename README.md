@@ -24,7 +24,7 @@ Clone the repository to your local machine using the following command:
 
 bash
 Copy code
-git clone https://github.com/your-username/job-board.git
+git clone https://github.com/RAZOREAGLE-AMLESH/job-board.git
 Open the index.html file in your browser to start using the job board.
 
 How to Use

@@ -38,7 +38,13 @@ Post a Job: Employers can post a job by logging into their account and navigatin
 View Job Listings: Job seekers can browse the job listings available on the homepage (index.html). Employers can view their own job listings on their profile page (profile.html).
 
 Usage Screenshots
-![image](https://github.com/user-attachments/assets/cf2646e0-b2fd-4520-ac7a-4a805d9b37ed)
+![image](https://github.com/user-attachments/assets/f2d57900-0da5-498a-9f7e-5f4a81baa9f3)
+![image](https://github.com/user-attachments/assets/892e07e5-a027-4c1e-b2de-fbc6d428b69d)
+![image](https://github.com/user-attachments/assets/26307fa8-dd8e-41be-8a07-215d01d28456)
+![image](https://github.com/user-attachments/assets/4a7edf5b-aaa1-433f-9ad0-09476e54a4d7)
+![image](https://github.com/user-attachments/assets/1dc0a9a6-a96a-4274-85ff-802ae07790db)
+
+
 
 
 Contributing

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<script>
+    const jobs = [
+    { title: 'Software Engineer', company: 'Tech Corp', location: 'Bengaluru, Karnataka', description: 'Develop software applications with modern technologies like Java and Spring Boot.' },
+    { title: 'Data Scientist', company: 'Data Vision Pvt Ltd', location: 'Hyderabad, Telangana', description: 'Analyze and interpret complex data to inform business decisions.' },
+    { title: 'UI/UX Designer', company: 'Design Studio', location: 'Mumbai, Maharashtra', description: 'Design user interfaces and improve user experiences for mobile apps and websites.' },
+    { title: 'Product Manager', company: 'Innovate Ltd', location: 'Gurgaon, Haryana', description: 'Oversee the product lifecycle, from ideation to launch, and manage cross-functional teams.' },
+    { title: 'Backend Developer', company: 'CodeX Solutions', location: 'Pune, Maharashtra', description: 'Build and maintain server-side logic, manage databases, and integrate APIs.' },
+    { title: 'Digital Marketing Manager', company: 'Marketing Hub', location: 'Delhi', description: 'Plan and execute marketing strategies to increase brand awareness and online presence.' },
+    { title: 'Full Stack Developer', company: 'Tech Innovators Pvt Ltd', location: 'Chennai, Tamil Nadu', description: 'Work on both front-end and back-end technologies to create robust web applications.' },
+    { title: 'Salesforce Developer', company: 'Cloud Experts', location: 'Noida, Uttar Pradesh', description: 'Develop custom Salesforce applications and integrate them with third-party services.' },
+    { title: 'DevOps Engineer', company: 'Cloud Solutions', location: 'Kochi, Kerala', description: 'Automate infrastructure and manage CI/CD pipelines to ensure smooth software deployment.' },
+    { title: 'Business Analyst', company: 'Consulting Solutions', location: 'Ahmedabad, Gujarat', description: 'Gather requirements from clients, analyze business needs, and provide strategic recommendations.' }
+];
+
+
+function displayJobs(filteredJobs) {
+    const jobList = document.getElementById('jobList');
+    jobList.innerHTML = ''; // Clear previous jobs
+
+    filteredJobs.forEach(job => {
+        const jobItem = document.createElement('li');
+        jobItem.innerHTML = `<strong>${job.title}</strong> at ${job.company} - ${job.location}<p>${job.description}</p>`;
+        jobList.appendChild(jobItem);
+    });
+}
+
+function searchJobs() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const filteredJobs = jobs.filter(job => 
+        job.title.toLowerCase().includes(query) || 
+        job.company.toLowerCase().includes(query) ||
+        job.location.toLowerCase().includes(query)
+    );
+    displayJobs(filteredJobs);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    displayJobs(jobs); // Display all jobs on page load
+});
+
+</script>
+<body>
+    <header>
+        <h1> Naukri Dekho 2.0 </h1>
+        <nav>
+            <a href="login.html">Login</a>
+            <a href="post-job.html">Post Job</a>
+            <a href="profile.html">Employer profile</a>
+        </nav>
+    </header>
+    
+    <section class="search">
+        <input type="text" id="searchInput" placeholder="Search for jobs...">
+        <button onclick="searchJobs()">Search</button>
+    </section>
+
+    <section id="job-listings">
+        <h2>Available Jobs</h2>
+        <ul id="jobList">
+            <!-- Job items will appear here -->
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
